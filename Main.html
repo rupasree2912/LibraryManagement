@@ -1,0 +1,256 @@
+<html>
+<head>
+	<style>
+		    table {
+      width: 100%;
+      border-collapse: collapse;
+	  background-color: deeppink;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    button {
+      padding: 6px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+		#button1{
+			width: 50px;
+        border: 5px solid #090;
+        text-align: center;
+		}
+		#gfg1 {
+			animation-name: text;
+			animation-duration: 5s;
+			animation-iteration-count: one;
+		}
+
+		#geek1 {
+			font-size: 40px;
+			text-align: center;
+			font-weight: bold;
+			color: #090;
+			padding-bottom: 5px;
+			background-color: azure;
+		}
+
+		#geek2 {
+			font-size: 17px;
+			font-weight: bold;
+			text-align: center;
+			background-color: azure;
+		}
+
+		@keyframes text {
+			from {
+				margin-top: 400px;
+			}
+
+			to {
+				margin-top: 0px;
+			}
+		}
+
+		::selection{
+  color: #fff;
+  background: #664AFF;
+}
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+	</style>
+</head>
+
+<body style="background-color:rgb(127, 229, 255);">
+	<div id="button1">
+	<a href="login.html"><button>Login</button></a>
+	</div>
+	<br>
+	<div id="gfg1">
+		<div id="geek1">Library Management</div>
+		<div id="geek2">Books are the best Weapon in the World!</div>
+	</div>
+	<div class="wrapper">
+		<div class="search-input">
+		  <a href="" target="_blank" hidden></a>
+		  <input type="text" placeholder="Type to search..">
+		  <div class="autocom-box">
+			<!-- here list are inserted from javascript -->
+		  </div>
+		  <div class="icon"><i class="fas fa-search"></i></div>
+		</div>
+	</div>
+	<table>
+		<tr>
+		  <th>Title</th>
+		  <th>Author</th>
+		  <th>Year</th>
+		  <th>Add to Cart</th>
+		</tr>
+		<tr>
+		  <td>The Great Gatsby</td>
+		  <td>F. Scott Fitzgerald</td>
+		  <td>1925</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>To Kill a Mockingbird</td>
+		  <td>Harper Lee</td>
+		  <td>1960</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>1984</td>
+		  <td>George Orwell</td>
+		  <td>1949</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>Pride and Prejudice</td>
+		  <td>Jane Austen</td>
+		  <td>1813</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>The Catcher in the Rye</td>
+		  <td>J.D. Salinger</td>
+		  <td>1951</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>The Lord of the Rings</td>
+		  <td>J.R.R. Tolkien</td>
+		  <td>1954</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>Harry Potter and the Sorcerer's Stone</td>
+		  <td>J.K. Rowling</td>
+		  <td>1997</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>Brave New World</td>
+		  <td>Aldous Huxley</td>
+		  <td>1932</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>The Hobbit</td>
+		  <td>J.R.R. Tolkien</td>
+		  <td>1937</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>Crime and Punishment</td>
+		  <td>Fyodor Dostoevsky</td>
+		  <td>1866</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		<tr>
+		  <td>The Alchemist</td>
+		  <td>Paulo Coelho</td>
+		  <td>1988</td>
+		  <td><button onclick="displayAdded(this)">Add to Cart</button></td>
+		</tr>
+		</table>
+		<br>
+		<br>
+	  <h1 style="animation-direction: alternate;">Cart</h1>
+	  <br>
+	  <table id="cartitem" style="background-color: darkorange;">
+		<tr>
+		  <th>Title</th>
+		  <th>Author</th>
+		  <th>Year</th>
+		</tr>
+		<!-- The following rows will be dynamically populated based on the added items -->
+	  </table>
+<script src="suggestions.js"></script> 
+     <script src="searchbar.js"></script>
+	 <script>
+		    function displayAdded(button) {
+      button.innerHTML = "Added";
+      var row = button.parentNode.parentNode;
+      var title = row.cells[0].innerHTML;
+      var author = row.cells[1].innerHTML;
+      var year = row.cells[2].innerHTML;
+
+      var cartTable = document.getElementById('cartitem');
+      var newRow = cartTable.insertRow(-1);
+      newRow.insertCell(0).innerHTML = title;
+      newRow.insertCell(1).innerHTML = author;
+      newRow.insertCell(2).innerHTML = year;
+    }
+	</script>
+	<br>
+	<br>
+	<a href="thank.html"><button id="button">Checkout</button></a>
+</body>
+</html>
